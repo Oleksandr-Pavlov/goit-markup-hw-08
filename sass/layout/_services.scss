@@ -1,0 +1,29 @@
+.services__item {
+  margin-right: var(--element-gap);
+  max-width: 100%;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.services__wrap {
+  position: relative;
+}
+
+.services__text {
+  position: absolute;
+  bottom: 0;
+
+  padding: 27px 0;
+  width: 100%;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--text-color-secondary);
+  background-color: rgba(47, 48, 58, 0.8);
+}

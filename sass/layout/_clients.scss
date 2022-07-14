@@ -1,0 +1,33 @@
+.clients__item {
+  max-width: 170px;
+  margin-right: var(--element-gap);
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+  transform: scale(1);
+
+  transition: border var(--transition), color var(--transition), transform var(--transition);
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    transform: scale(1.1);
+  }
+}
+
+.clients__icon {
+  fill: currentColor;
+}
