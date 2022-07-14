@@ -6,10 +6,12 @@
 }
 
 .cards__item {
-  height: 100%;
   max-width: 450px;
   @include tablet {
     max-width: 354px;
+    &:last-child {
+      margin-right: auto;
+    }
   }
   @include desktop {
     max-width: 370px;

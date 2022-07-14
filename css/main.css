@@ -60,6 +60,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--title-color);
   background-color: var(--primary-bcg-color);
+  padding-top: 81px;
 }
 
 .title {
@@ -495,12 +496,14 @@ body {
 }
 
 .cards__item {
-  height: 100%;
   max-width: 450px;
 }
 @media screen and (min-width: 768px) {
   .cards__item {
     max-width: 354px;
+  }
+  .cards__item:last-child {
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -800,7 +803,7 @@ body {
 .header {
   position: fixed;
   z-index: 999;
-  background-color: rgba(255, 255, 255, 0.832);
+  background-color: rgba(255, 255, 255, 0.9);
   top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -863,14 +866,16 @@ body {
 }
 
 .contacts {
+  display: block;
   margin-left: auto;
 }
-
-.contacts__item {
-  margin-right: 50px;
-}
-.contacts__item:last-child {
-  margin-right: 0;
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .contacts__link {
@@ -880,15 +885,20 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 5px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
   -webkit-transition: color var(--transition);
   transition: color var(--transition);
+}
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    font-size: 14px;
+    padding: 32px 0;
+  }
 }
 .contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
