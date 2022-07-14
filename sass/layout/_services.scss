@@ -1,3 +1,11 @@
+.services {
+  display: none;
+  @include desktop {
+    display: block;
+    padding-top: 0;
+  }
+}
+
 .services__item {
   margin-right: var(--element-gap);
   max-width: 100%;

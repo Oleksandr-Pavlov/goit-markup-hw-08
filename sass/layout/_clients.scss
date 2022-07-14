@@ -1,8 +1,20 @@
+.clients__list {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--element-gap);
+}
+
 .clients__item {
-  max-width: 170px;
-  margin-right: var(--element-gap);
-  &:last-child {
-    margin-right: 0;
+  flex-grow: 1;
+  min-width: 130px;
+  @include mobile {
+    width: 210px;
+  }
+  @include tablet {
+    width: 226px;
+  }
+  @include desktop {
+    width: 170px;
   }
 }
 
@@ -10,16 +22,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 92px;
-
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
   transform: scale(1);
-
   transition: border var(--transition), color var(--transition), transform var(--transition);
-
   &:hover,
   &:focus {
     border: 1px solid var(--accent-color);

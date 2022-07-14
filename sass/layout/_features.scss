@@ -1,12 +1,20 @@
-.features {
-  padding-bottom: 0;
+// .features {
+//   padding-bottom: 0;
+// }
+
+.features__list {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--element-gap);
 }
 
 .features__item {
-  margin-right: var(--element-gap);
-  max-width: 270px;
-  &:last-child {
-    margin-right: 0;
+  max-width: 450px;
+  @include tablet {
+    max-width: 354px;
+  }
+  @include desktop {
+    max-width: 270px;
   }
 }
 
@@ -23,11 +31,14 @@
 
 .features__descr {
   margin-bottom: 10px;
-
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
+  @include tablet {
+    text-align: inherit;
+  }
   color: var(--title-color);
 }
 

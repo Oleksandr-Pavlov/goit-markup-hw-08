@@ -1,16 +1,30 @@
 .footer {
   padding: 60px 0;
-
   background-color: #2f303a;
 }
 
 .footer__container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  text-align: center;
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  @include desktop {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: start;
+    gap: 0;
+  }
 }
 
 .footer__content {
-  width: 231px;
+  min-width: 231px;
 }
 
 .footer__logo {
@@ -27,7 +41,7 @@
 }
 
 .address__item {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   &:last-child {
     margin-bottom: 0;
   }
@@ -51,5 +65,11 @@
 }
 
 .footer__join-us {
-  margin-left: 70px;
+  @include tablet {
+    align-self: baseline;
+  }
+  @include desktop {
+    margin-right: 93px;
+    margin-left: 70px;
+  }
 }

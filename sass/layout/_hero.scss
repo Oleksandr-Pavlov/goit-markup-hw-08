@@ -1,30 +1,39 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
   margin: 0 auto;
   max-width: 1600px;
-
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #c4c4c4;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include desktop {
+    height: 600px;
+  }
 }
 
 .hero__content {
   margin: 0 auto;
-  max-width: 696px;
+  max-width: 360px;
+  @include desktop {
+    max-width: 696px;
+  }
 }
 
 .hero__title {
   margin-bottom: var(--element-gap);
-
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--hero-title-color);
+  @include desktop {
+    font-size: 44px;
+  }
 }
