@@ -497,9 +497,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: var(--element-gap);
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
 }
 
 .cards__item {
@@ -938,10 +935,10 @@ body {
   width: 100vw;
   height: 100vh;
   padding: 48px 0;
-  -webkit-transition: -webkit-transform 300ms linear;
-  transition: -webkit-transform 300ms linear;
-  transition: transform 300ms linear;
-  transition: transform 300ms linear, -webkit-transform 300ms linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 @media screen and (min-width: 768px) {
   .mob-menu {
@@ -949,8 +946,8 @@ body {
   }
 }
 .mob-menu.is-hidden {
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .menu-btn {
@@ -961,6 +958,14 @@ body {
   background-color: transparent;
   padding: 0;
   margin-left: auto;
+  color: #212121;
+  cursor: pointer;
+}
+.menu-btn svg {
+  fill: currentColor;
+}
+.menu-btn:hover, .menu-btn:focus {
+  color: var(--accent-color);
 }
 @media screen and (min-width: 768px) {
   .menu-btn {
@@ -1035,6 +1040,9 @@ body {
   letter-spacing: 0.02em;
   color: #757575;
   padding: 16px 0;
+}
+.mob-menu__mail:hover, .mob-menu__mail:focus {
+  color: var(--accent-color);
 }
 
 .hero {

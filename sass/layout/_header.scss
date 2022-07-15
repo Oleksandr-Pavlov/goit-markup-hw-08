@@ -110,12 +110,12 @@
   width: 100vw;
   height: 100vh;
   padding: 48px 0;
-  transition: transform 300ms linear;
+  transition: transform 0.3s linear;
   @include tablet {
     display: none;
   }
   &.is-hidden {
-    transform: translateY(100%);
+    transform: translateX(100%);
   }
 }
 
@@ -127,6 +127,15 @@
   background-color: transparent;
   padding: 0;
   margin-left: auto;
+  color: #212121;
+  cursor: pointer;
+  & svg {
+    fill: currentColor;
+  }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
   @include tablet {
     display: none;
   }
@@ -186,4 +195,8 @@
   letter-spacing: 0.02em;
   color: #757575;
   padding: 16px 0;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
