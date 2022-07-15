@@ -486,6 +486,11 @@ body {
   color: #afb1b8;
 }
 
+.socials__link--custom {
+  background-color: #757575;
+  color: #fff;
+}
+
 .socials__icon {
   fill: currentColor;
 }
@@ -940,14 +945,14 @@ body {
   transition: transform 0.3s linear;
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
+.mob-menu.is-hidden {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
 @media screen and (min-width: 768px) {
   .mob-menu {
     display: none;
   }
-}
-.mob-menu.is-hidden {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
 }
 
 .menu-btn {
