@@ -103,6 +103,12 @@ body {
   overflow: hidden;
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .container {
   width: 100%;
   padding-left: 15px;
@@ -127,6 +133,7 @@ body {
 
 .backdrop {
   position: fixed;
+  z-index: 20;
   top: 0;
   left: 0;
   width: 100%;
@@ -802,7 +809,7 @@ body {
 
 .header {
   position: fixed;
-  z-index: 999;
+  z-index: 10;
   background-color: rgba(255, 255, 255, 0.9);
   top: 0;
   left: 50%;
@@ -923,6 +930,29 @@ body {
   fill: currentColor;
 }
 
+.mob-menu {
+  position: fixed;
+  background-color: var(--primary-bcg-color);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 0;
+  -webkit-transition: -webkit-transform 300ms linear;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+}
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
+}
+.mob-menu.is-hidden {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
 .menu-btn {
   display: block;
   width: 40px;
@@ -940,23 +970,8 @@ body {
 
 .menu-btn--close {
   position: absolute;
-  top: 10px;
+  top: 18px;
   right: 15px;
-}
-
-.mob-menu {
-  position: fixed;
-  background-color: var(--primary-bcg-color);
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 48px 0;
-}
-@media screen and (min-width: 768px) {
-  .mob-menu {
-    display: none;
-  }
 }
 
 .mob-menu__inner {

@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  z-index: 999;
+  z-index: 10;
   background-color: rgba(255, 255, 255, 0.9);
   top: 0;
   left: 50%;
@@ -102,6 +102,23 @@
   fill: currentColor;
 }
 
+.mob-menu {
+  position: fixed;
+  background-color: var(--primary-bcg-color);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 0;
+  transition: transform 300ms linear;
+  @include tablet {
+    display: none;
+  }
+  &.is-hidden {
+    transform: translateY(100%);
+  }
+}
+
 .menu-btn {
   display: block;
   width: 40px;
@@ -117,21 +134,8 @@
 
 .menu-btn--close {
   position: absolute;
-  top: 10px;
+  top: 18px;
   right: 15px;
-}
-
-.mob-menu {
-  position: fixed;
-  background-color: var(--primary-bcg-color);
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 48px 0;
-  @include tablet {
-    display: none;
-  }
 }
 
 .mob-menu__inner {
