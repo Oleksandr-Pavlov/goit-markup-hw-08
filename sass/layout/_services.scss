@@ -6,12 +6,9 @@
   }
 }
 
-.services__item {
-  margin-right: var(--element-gap);
-  max-width: 100%;
-  &:last-child {
-    margin-right: 0;
-  }
+.services__list {
+  flex-wrap: wrap;
+  gap: var(--element-gap);
 }
 
 .services__wrap {

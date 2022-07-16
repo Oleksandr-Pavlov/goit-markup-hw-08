@@ -25,12 +25,8 @@
   @include tablet {
     display: block;
   }
-}
-
-.nav__item {
-  margin-right: 50px;
-  &:last-child {
-    margin-right: 0;
+  & .list {
+    gap: 50px;
   }
 }
 
@@ -104,13 +100,14 @@
 
 .mob-menu {
   position: fixed;
+  z-index: 100;
   background-color: var(--primary-bcg-color);
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 48px 0;
-  transition: transform 0.3s linear;
+  transition: all 0.3s linear;
   &.is-hidden {
     transform: translateX(100%);
   }
