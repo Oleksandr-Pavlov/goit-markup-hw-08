@@ -12,6 +12,13 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 300ms linear;
+  .backdrop & {
+    @media screen and (orientation: landscape) and (max-height: 609px) {
+      top: 0;
+      left: 50%;
+      transform: translate(-50%) scale(1);
+    }
+  }
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
   }
