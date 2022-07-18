@@ -406,6 +406,14 @@ body {
   transition: transform 300ms linear;
   transition: transform 300ms linear, -webkit-transform 300ms linear;
 }
+@media screen and (orientation: landscape) and (max-height: 609px) {
+  .backdrop .modal {
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%) scale(1);
+            transform: translate(-50%) scale(1);
+  }
+}
 .backdrop.is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(0);
           transform: translate(-50%, -50%) scale(0);
